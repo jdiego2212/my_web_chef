@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block title %}
+BIENVENIDO
+{% endblock %}
+
+{% block content %}
+<div class="hero">
+    <div class="hero-content">
+        <div class="left">
+            <h1>Cocinero</h1>
+            <h1>Juan Diego Orozco Z.</h1>
+            <br>
+            <br>
+            <p>Cocinero con experiencia de más de 2 años en la hostelería con competencias en cocina caliente, fria, pasteleria y en organización.</p>
+            <a href="#contacto" class="btn">Cotáctar</a>
+        </div>
+        <div class="right">
+            <img src="{{ url_for("static", filename="IMG.png") }}" width=600px />
+        </div>
+    </div>
+</div>
+{% include "portfolio/section-first.html" %}
+{% include "portfolio/section-second.html" %}
+{% include "portfolio/section-third.html" %}
+{% endblock %}

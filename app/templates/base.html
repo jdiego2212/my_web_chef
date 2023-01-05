@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<title>{% block title %}{% endblock %} - Portafolio</title>
+<link rel="stylesheet" href="{{ url_for("static", filename="style.css") }}">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600&family=Rubik:wght@400;700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600&family=Rubik:wght@400;700&family=Rufina:wght@400;700&display=swap" rel="stylesheet">
+
+<body>
+    <header>
+        <div class="logo">JUAN DIEGO O. Z</div>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for("portfolio.index") }}">Inicio</a></li>
+                <li><a href="#contacto">Contactar</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section>{% block content %}{% endblock %}</section>
+    <div class="footer"> <!-- START FOOTER START -->
+        <div class="center full-width">
+            <div class="row">
+                <h3>⭐️ ¡Gracias Por Visitar Mi Pagina Web! ⭐️</h3>
+            </div>
+        </div>
+        <div class="center full-width">
+            <div class="row">
+                <p>Puedes Seguirme En Mis Redes Sociales.</p>
+            </div>
+        </div>
+        <div class="center full-width social-links">
+            <div class="row">
+                <a target="_blank" href="https://www.instagram.com/juandiegoorozcoz/"><img class="social" width="30" src="{{ url_for("static", filename="instagram2.png") }}" alt=""></a>
+                <a target="_blank" href="https://www.linkedin.com/in/juan-diego-orozco-zapata-30b50925b/"><img class="social" width="30" src="{{ url_for("static", filename="linkedin.png") }}" alt=""></a>
+                <a target="_blank" href="https://www.facebook.com/profile.php?id=100086575020144"><img class="social" width="30" src="{{ url_for("static", filename="facebook.png") }}" alt=""></a>
+
+            </div>
+        </div>
+        <div class="made-with">
+            <p>¡Made With 🧡!</p>
+        </div>
+    </div>
+</body>
